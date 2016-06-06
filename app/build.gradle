@@ -30,4 +30,6 @@ dependencies {
     compile 'com.android.support:design:23.3.0'
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
     compile project(':ben_poster_library')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile project(':dialog')
 }
