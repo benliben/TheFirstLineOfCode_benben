@@ -136,6 +136,23 @@
         <activity android:name=".ui.activity.location.MapPathActivity2"></activity>
         <!--poi搜索功能-->
         <activity android:name=".ui.activity.location.PoiSearchActivity"></activity>
+
+
+        <!--传感器-->
+        <activity android:name=".ui.activity.sensor.TheSensorActivity"></activity>
+        <!--光线传感器-->
+        <activity android:name=".ui.activity.sensor.BeamActivity"></activity>
+        <!--方向传感器-->
+        <activity android:name=".ui.activity.sensor.DirectionActivity">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <!--指南针-->
+        <!--加速度传感器-->
+        <activity android:name=".ui.activity.sensor.AccelerationActivity"></activity>
+
     </application>
 
 </manifest>

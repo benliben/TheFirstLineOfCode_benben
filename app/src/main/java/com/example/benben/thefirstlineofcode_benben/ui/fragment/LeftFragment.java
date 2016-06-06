@@ -19,6 +19,7 @@ import com.example.benben.thefirstlineofcode_benben.ui.activity.location.Locatio
 import com.example.benben.thefirstlineofcode_benben.ui.activity.much.MediaActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.network.MyNetWorkActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.radio.RadioActive;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.sensor.TheSensorActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.service.MyServiceActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.storage.StorageActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
@@ -102,7 +103,7 @@ public class LeftFragment extends BaseFragment {
                         break;
                     case 5:
                         /**传感器*/
-//                        TheSensorActivity.startTheSensorActivity(getActivity());
+                        TheSensorActivity.startTheSensorActivity(getActivity());
                         break;
                     case 6:
                         /**活动*/
