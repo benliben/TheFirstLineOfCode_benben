@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.chat.ChatActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.login.LoginActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.sensor.DirectionActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
 
@@ -84,7 +85,7 @@ public class RightFragment extends BaseFragment {
                         break;
                     /**登录*/
                     case 2:
-//                        LoginActivity.startLoginActivity(getActivity());
+                        LoginActivity.startLoginActivity(getActivity());
                         break;
                     /**音乐*/
                     case 3:
