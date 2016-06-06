@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 
 import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.chat.ChatActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.sensor.DirectionActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
 
 import java.util.ArrayList;
@@ -74,11 +76,11 @@ public class RightFragment extends BaseFragment {
                 switch (position) {
                     case 0:
                         /**指南针*/
-//                        DirectionActivity.startDirectionActivity(getActivity());
+                        DirectionActivity.startDirectionActivity(getActivity());
                         break;
                     case 1:
                         /**聊天*/
-//                        ChatActivity.startChatActivity(getActivity());
+                        ChatActivity.startChatActivity(getActivity());
                         break;
                     /**登录*/
                     case 2:

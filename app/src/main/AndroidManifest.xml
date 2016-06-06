@@ -351,7 +351,32 @@
             android:process=":remote">
         </service>
 
+        <!--注册广播-->
+        <receiver android:name=".receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.MyBroadcastReceiver">
+            <intent-filter
 
+                android:priority="100">
+                <action android:name="com.example.benben.firstline.MY_BROASCAST"/>
+            </intent-filter>
+        </receiver>
+        <!--登录界面的强制退出-->
+        <receiver android:name=".receiver.ForceOfflineReceiver">
+            <intent-filter>
+                <action android:name="com.example.benben.firstline.FORCE_OFFLINE"/>
+            </intent-filter>
+        </receiver>
+
+
+
+
+        <!--右边-->
+        <!--聊天-->
+        <activity android:name=".ui.activity.chat.ChatActivity"></activity>
 
 
     </application>
