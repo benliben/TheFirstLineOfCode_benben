@@ -101,6 +101,13 @@
         <!--视频播放器-->
         <activity android:name=".ui.activity.much.PlayMoveActivity"></activity>
 
+
+
+        <!--服务-->
+        <activity android:name=".ui.activity.service.MyServiceActivity"></activity>
+        <!--在子线程中更新UI-->
+        <activity android:name=".ui.activity.service.MoreThreadActivity"></activity>
+
     </application>
 
 </manifest>
