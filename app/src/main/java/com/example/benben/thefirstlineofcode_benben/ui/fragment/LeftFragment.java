@@ -15,6 +15,7 @@ import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.activity.activityActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.radio.RadioActive;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.storage.StorageActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
 
 import java.util.ArrayList;
@@ -106,9 +107,9 @@ public class LeftFragment extends BaseFragment {
                     case 7:
                         RadioActive.startRadioActivity(getActivity());
                         break;
-                        /**广播*/
+                        /**存储*/
                     case 8:
-//                        StorageActivity.startStorageActivity(getActivity());
+                        StorageActivity.startStorageActivity(getActivity());
                         break;
                     /**手机百度Demo*/
                     case 9:
