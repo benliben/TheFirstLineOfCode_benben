@@ -29,4 +29,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.android.support:design:23.3.0'
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    compile project(':ben_poster_library')
 }
