@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,14 +14,16 @@
             android:id="@+id/path_textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="起点：" />
+            android:text="起点："
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/path_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="我的位置" />
+            android:text="我的位置"
+            tools:ignore="HardcodedText,TextFields" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,7 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="searchButtonProcess"
-            android:text="驾车搜搜" />
+            android:text="驾车搜搜"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/path_bath"
@@ -98,7 +102,8 @@
             android:layout_alignWithParentIfMissing="false"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
 
             <Button
                 android:layout_width="match_parent"

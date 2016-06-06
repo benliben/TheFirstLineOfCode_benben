@@ -63,10 +63,6 @@ import java.util.List;
  * 百度路线图
  */
 
-
-
-
-
 public class MapPathActivity extends BaseActivity implements BaiduMap.OnMapClickListener,OnGetRoutePlanResultListener {
     private static final String TAG = "MapPathActivity";
 

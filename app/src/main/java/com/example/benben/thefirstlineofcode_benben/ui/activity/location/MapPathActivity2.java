@@ -75,6 +75,7 @@ import butterknife.InjectView;
  * Created by benben on 2016/5/26.
  * 定位 路线
  */
+@SuppressWarnings({"JavaDoc", "UnusedAssignment"})
 public class MapPathActivity2 extends BaseActivity implements
         OnGetRoutePlanResultListener,BaiduMap.OnMapClickListener,OnGetGeoCoderResultListener {
     private static final String TAG = "MapPathActivity2";
@@ -85,22 +86,23 @@ public class MapPathActivity2 extends BaseActivity implements
     }
 
 
-    LocationModel locationInfo;
-    PlanNode enNode;//搜索的终点
-    PlanNode stNode;//搜索的起点
+    private LocationModel locationInfo;
+    private PlanNode enNode;//搜索的终点
+    private PlanNode stNode;//搜索的起点
 
     /**
      * 浏览路线节点相关
      */
     @InjectView(R.id.pre)
+
     Button mBtnPre;//上一个节点
     @InjectView(R.id.next)
+
     Button mBtnNext;//下一个节点
     private int nodeIndex = -1;//节点索引，供浏览节点使用
     private RouteLine route = null;
     private BikingRouteOverlay routeOverlay = null;
-    boolean useDefaultIcon = false;//路线图标
-    private TextView popupText = null;//泡泡wiew
+    private boolean useDefaultIcon = false;//路线图标
 
     private LatLng ll;
 
@@ -111,7 +113,7 @@ public class MapPathActivity2 extends BaseActivity implements
      */
     @InjectView(R.id.path_map)
     MapView mMapView;
-    private BaiduMap mBaiduMap = null;
+     BaiduMap mBaiduMap = null;
 
     /**
      * 搜索相关
@@ -122,10 +124,10 @@ public class MapPathActivity2 extends BaseActivity implements
      * 定位相关
      */
     private LocationClient mLocationClient = null;// LocationClient类是定位sdk的核心类
-    private BDLocationListener myListener = new MyLocationListenner();// 注册定位监听，返回定位的结果
+    private final BDLocationListener myListener = new MyLocationListenner();// 注册定位监听，返回定位的结果
 
     /**是否首次定位*/
-    boolean isFirstLoc = true;
+    private boolean isFirstLoc = true;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -225,7 +227,7 @@ public class MapPathActivity2 extends BaseActivity implements
 
 
     /**定位SDK监听函数*/
-    public class MyLocationListenner implements BDLocationListener {
+    private class MyLocationListenner implements BDLocationListener {
         @Override
         public void onReceiveLocation(BDLocation location) {
             // map view 销毁后不在处理新接收的位置
@@ -249,7 +251,7 @@ public class MapPathActivity2 extends BaseActivity implements
                 builder.target(ll).zoom(19.0f);
                 // animationMapStatus()方法把定位到的点移动到地图中心
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
-                StringBuffer sb = new StringBuffer(256);
+                StringBuilder sb = new StringBuilder(256);
                 sb.append("time : ");
                 sb.append(location.getTime());
                 sb.append("\nerror code : ");
@@ -321,6 +323,7 @@ public class MapPathActivity2 extends BaseActivity implements
      * ；路线规划搜索
      * @param v
      */
+    @SuppressWarnings("JavaDoc")
     public void searchButtonProcess(View v) {
         Log.i(TAG, "_______________________1______________________");
         /**重置浏览节点的路线数据*/
@@ -335,8 +338,10 @@ public class MapPathActivity2 extends BaseActivity implements
 
         /**设置起终点信息，对于tranist search来说，城市名无意义*/
 
-         stNode = PlanNode.withCityNameAndPlaceName("北京", editSt.getText().toString());
-         enNode = PlanNode.withCityNameAndPlaceName("北京", editEn.getText().toString());
+        assert editSt != null;
+        stNode = PlanNode.withCityNameAndPlaceName("北京", editSt.getText().toString());
+        assert editEn != null;
+        enNode = PlanNode.withCityNameAndPlaceName("北京", editEn.getText().toString());
 
 
 
@@ -386,6 +391,7 @@ public class MapPathActivity2 extends BaseActivity implements
      *
      * @param v
      */
+    @SuppressWarnings("JavaDoc")
     public void nodeClick(View v) {
         Log.i(TAG, "_______________________2______________________");
         if (route == null || route.getAllStep() == null) {
@@ -435,7 +441,7 @@ public class MapPathActivity2 extends BaseActivity implements
         // 移动节点到中心
         mBaiduMap.setMapStatus(MapStatusUpdateFactory.newLatLng(nodeLocation));
         // show popup
-        popupText = new TextView(MapPathActivity2.this);
+        TextView popupText = new TextView(MapPathActivity2.this);
         popupText.setBackgroundResource(R.mipmap.popup);//设置背景
         popupText.setTextColor(0xFF000000);
         popupText.setText(nodeTitle);
@@ -465,12 +471,6 @@ public class MapPathActivity2 extends BaseActivity implements
         routeOverlay.addToMap();
     }
 
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
-        super.onRestoreInstanceState(savedInstanceState);
-    }
-
     /**自行车路线*/
     @SuppressWarnings({ "unchecked", "unchecked" })
     @Override
@@ -481,6 +481,7 @@ public class MapPathActivity2 extends BaseActivity implements
             Toast.makeText(MapPathActivity2.this, "抱歉，未找到结果",
                     Toast.LENGTH_SHORT).show();
         }
+        assert bikingRouteResult != null;
         if (bikingRouteResult.error == SearchResult.ERRORNO.AMBIGUOUS_ROURE_ADDR) {
             // 起终点或途经点地址有岐义，通过以下接口获取建议查询信息
             // result.getSuggestAddrInfo()
@@ -497,7 +498,7 @@ public class MapPathActivity2 extends BaseActivity implements
             overlay1.setData(bikingRouteResult.getRouteLines().get(0));
             overlay1.addToMap();
             overlay1.zoomToSpan();
-            List<String> datas = new ArrayList<String>();
+            List<String> datas = new ArrayList<>();
             List<BikingRouteLine> routeLines = bikingRouteResult.getRouteLines();
             if (routeLines != null) {
                 System.out.println(routeLines.size());
@@ -521,6 +522,7 @@ public class MapPathActivity2 extends BaseActivity implements
             Toast.makeText(MapPathActivity2.this, "抱歉，未找到结果",
                     Toast.LENGTH_SHORT).show();
         }
+        assert result != null;
         if (result.error == SearchResult.ERRORNO.AMBIGUOUS_ROURE_ADDR) {
             // 起终点或途经点地址有岐义，通过以下接口获取建议查询信息
             // result.getSuggestAddrInfo()
@@ -537,7 +539,7 @@ public class MapPathActivity2 extends BaseActivity implements
             overlay.setData(result.getRouteLines().get(0));
             overlay.addToMap();
             overlay.zoomToSpan();
-            List<String> datas = new ArrayList<String>();
+            List<String> datas = new ArrayList<>();
             List<DrivingRouteLine> routeLines = result.getRouteLines();
             if (routeLines != null) {
                 System.out.println(routeLines.size());
@@ -561,6 +563,7 @@ public class MapPathActivity2 extends BaseActivity implements
             Toast.makeText(MapPathActivity2.this, "抱歉未找到结果",
                     Toast.LENGTH_SHORT).show();
         }
+        assert result != null;
         if (result.error == SearchResult.ERRORNO.AMBIGUOUS_ROURE_ADDR) {
             // 起终点或途经点地址有岐义，通过以下接口获取建议查询信息
             // result.getSuggestAddrInfo()
@@ -578,7 +581,7 @@ public class MapPathActivity2 extends BaseActivity implements
             overlay.addToMap();
             overlay.zoomToSpan();
             //获取详细信息路线
-            List<String> datas = new ArrayList<String>();
+            List<String> datas = new ArrayList<>();
             List<TransitRouteLine> routeLines = result.getRouteLines();
             if (routeLines != null) {
                 System.out.println(routeLines.size());
@@ -600,6 +603,7 @@ public class MapPathActivity2 extends BaseActivity implements
             Toast.makeText(MapPathActivity2.this, "抱歉未找到结果",
                     Toast.LENGTH_SHORT).show();
         }
+        assert result != null;
         if (result.error == SearchResult.ERRORNO.AMBIGUOUS_ROURE_ADDR) {
             // 起终点或途经点地址有岐义，通过以下接口获取建议查询信息
             // result.getSuggestAddrInfo()
@@ -616,7 +620,7 @@ public class MapPathActivity2 extends BaseActivity implements
             overlay.setData(result.getRouteLines().get(0));
             overlay.addToMap();
             overlay.zoomToSpan();
-            List<String> datas = new ArrayList<String>();
+            List<String> datas = new ArrayList<>();
             List<WalkingRouteLine> routeLines = result.getRouteLines();
             //获取详细信息路线
             if (routeLines != null) {
@@ -762,13 +766,16 @@ public class MapPathActivity2 extends BaseActivity implements
     /**
      * 开始导航
      */
+    @SuppressWarnings("UnusedAssignment")
     public void startNavi() {
+        //noinspection UnusedAssignment
         LatLng put = new LatLng(locationInfo.getLatitude(), locationInfo.getLongitude());
 
         final NaviParaOption para = new NaviParaOption();
         para.startPoint(ll);
         para.startName("从这里开始");
         EditText editEn = (EditText) findViewById(R.id.path_end);
+        assert editEn != null;
         enNode = PlanNode.withCityNameAndPlaceName("北京", editEn.getText().toString());
 //        para.endPoint(enNode);
         para.endName("到这里结束");

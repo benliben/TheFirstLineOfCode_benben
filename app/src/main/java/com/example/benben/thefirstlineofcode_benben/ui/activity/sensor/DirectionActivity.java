@@ -105,6 +105,7 @@ public class DirectionActivity extends BaseActivity {
 
     @OnClick(R.id.topLeft)
     public void onClick() {
+        finish();
     }
 
     class MySensorEventListener implements SensorEventListener {
