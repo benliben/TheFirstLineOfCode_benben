@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.activity.activityActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.content.ContentActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.radio.RadioActive;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.storage.StorageActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
@@ -77,7 +78,7 @@ public class LeftFragment extends BaseFragment {
                 switch (position) {
                     case 0:
                         /**内容提供者*/
-//                        ContentActivity.startContentActivity(getActivity());
+                        ContentActivity.startContentActivity(getActivity());
                         break;
                     case 1:
                         /**多媒体*/

@@ -79,6 +79,15 @@
         <activity android:name=".ui.activity.storage.SharedActivity"></activity>
         <!--SQLite-->
         <activity android:name=".ui.activity.storage.MySQLiteActivity"></activity>
+
+
+        <!--内容提供者-->
+        <activity android:name=".ui.activity.content.ContentActivity"></activity>
+        <!--读取联系人-->
+        <activity android:name=".ui.activity.content.ContentsTestActivity"></activity>
+        <!--读取别个程序的数据-->
+        <activity android:name=".ui.activity.content.ProviderTestActivity"></activity>
+
     </application>
 
 </manifest>
