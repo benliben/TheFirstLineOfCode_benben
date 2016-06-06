@@ -15,6 +15,7 @@ import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.activity.activityActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.content.ContentActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.much.MediaActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.radio.RadioActive;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.storage.StorageActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
@@ -82,7 +83,7 @@ public class LeftFragment extends BaseFragment {
                         break;
                     case 1:
                         /**多媒体*/
-//                        MediaActivity.startMediaActivity(getActivity());
+                        MediaActivity.startMediaActivity(getActivity());
                         break;
                     case 2:
                         /**服务*/

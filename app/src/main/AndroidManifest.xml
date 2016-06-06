@@ -88,6 +88,19 @@
         <!--读取别个程序的数据-->
         <activity android:name=".ui.activity.content.ProviderTestActivity"></activity>
 
+
+        <!--多媒体-->
+        <activity android:name=".ui.activity.much.MediaActivity"></activity>
+        <!--通知-->
+        <activity android:name=".ui.activity.much.InformActivity"></activity>
+        <!--短息-->
+        <activity android:name=".ui.activity.much.SMSActivity"></activity>
+        <!--照相机-->
+        <activity android:name=".ui.activity.much.CameraActivity"></activity>
+        <!--音乐播放器-->
+        <!--视频播放器-->
+        <activity android:name=".ui.activity.much.PlayMoveActivity"></activity>
+
     </application>
 
 </manifest>
