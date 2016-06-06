@@ -383,6 +383,16 @@
         <!--获取内存-->
         <activity android:name=".ui.activity.SDCard.GetStorageActivity"></activity>
 
+
+        <!--天气预报-->
+        <activity android:name=".ui.activity.weather.WeatherActivity">
+
+        </activity>
+        <activity android:name=".ui.activity.weather.ChooseAreaActivity"></activity>
+        <!--天气预报注册服务和广播接收-->
+        <service android:name=".service.AutoUpdateService"></service>
+        <receiver android:name=".receiver.AutoUpdateReceiver"></receiver>
+
     </application>
 
 </manifest>

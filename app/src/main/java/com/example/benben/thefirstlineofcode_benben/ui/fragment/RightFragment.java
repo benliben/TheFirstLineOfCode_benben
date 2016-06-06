@@ -15,9 +15,11 @@ import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.SDCard.GetStorageActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.chat.ChatActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.location.MapPathActivity2;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.login.LoginActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.much.MusicActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.sensor.DirectionActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.weather.WeatherActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
 
 import java.util.ArrayList;
@@ -99,11 +101,11 @@ public class RightFragment extends BaseFragment {
                         break;
                     case 5:
                     /**百度地图*/
-//                        BaiDuMapActivity.startBaiDuMapActivity(getActivity());
+                        MapPathActivity2.startMapPathActivity2(getActivity());
                         break;
                     case 6:
                         /**犇犇天气*/
-//                        WeatherActivity.startWeatherActivity(getActivity());
+                        WeatherActivity.startWeatherActivity(getActivity());
                         break;
 
                 }
