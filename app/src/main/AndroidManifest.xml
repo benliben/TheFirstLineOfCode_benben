@@ -380,6 +380,8 @@
         <!--登录页面-->
         <activity android:name=".ui.activity.login.LoginActivity"></activity>
         <activity android:name=".ui.activity.login.QuitActivity"></activity>
+        <!--获取内存-->
+        <activity android:name=".ui.activity.SDCard.GetStorageActivity"></activity>
 
     </application>
 

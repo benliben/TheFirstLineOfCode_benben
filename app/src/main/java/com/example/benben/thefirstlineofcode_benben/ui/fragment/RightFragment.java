@@ -13,8 +13,10 @@ import android.view.ViewGroup;
 
 import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.SDCard.GetStorageActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.chat.ChatActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.login.LoginActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.much.MusicActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.sensor.DirectionActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.adapter.LeftAdapter;
 
@@ -89,11 +91,11 @@ public class RightFragment extends BaseFragment {
                         break;
                     /**音乐*/
                     case 3:
-//                        MusicActivity.startMusicActivity(getActivity());
+                        MusicActivity.startMusicActivity(getActivity());
                         break;
                     /**获取内存*/
                     case 4:
-//                        GetStorageActivity.startGetStorgeActivity(getActivity());
+                        GetStorageActivity.startGetStorgeActivity(getActivity());
                         break;
                     case 5:
                     /**百度地图*/
