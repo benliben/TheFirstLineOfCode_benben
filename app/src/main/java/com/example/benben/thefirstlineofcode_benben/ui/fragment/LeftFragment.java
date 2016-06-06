@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.benben.thefirstlineofcode_benben.R;
 import com.example.benben.thefirstlineofcode_benben.model.LeftTagModel;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.activity.activityActivity;
+import com.example.benben.thefirstlineofcode_benben.ui.activity.baidumap.BaiDuMapDemoActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.content.ContentActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.location.LocationActivity;
 import com.example.benben.thefirstlineofcode_benben.ui.activity.much.MediaActivity;
@@ -119,7 +120,7 @@ public class LeftFragment extends BaseFragment {
                         break;
                     /**手机百度Demo*/
                     case 9:
-//                        BaiDuMapDemoActivity.startBaiDuMapDemoActivity(getActivity());
+                        BaiDuMapDemoActivity.startBaiDuMapDemoActivity(getActivity());
                 }
                 Toast.makeText(getActivity(), "你点击了" + position, Toast.LENGTH_SHORT).show();
             }
