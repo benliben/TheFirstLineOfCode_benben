@@ -108,6 +108,15 @@
         <!--在子线程中更新UI-->
         <activity android:name=".ui.activity.service.MoreThreadActivity"></activity>
 
+
+
+        <!--网络-->
+        <activity android:name=".ui.activity.network.MyNetWorkActivity"></activity>
+        <!--WebView-->
+        <activity android:name=".ui.activity.network.WebViewActivity"></activity>
+        <!--HttpURLConnection-->
+        <activity android:name=".ui.activity.network.HttpURLActivity"></activity>
+
     </application>
 
 </manifest>
