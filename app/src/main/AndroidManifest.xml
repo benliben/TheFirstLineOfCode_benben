@@ -45,7 +45,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!---百度地图所需权限-->
+
 
 
     <application
@@ -103,6 +103,7 @@
         <!--照相机-->
         <activity android:name=".ui.activity.much.CameraActivity"></activity>
         <!--音乐播放器-->
+        <activity android:name=".ui.activity.much.MusicActivity"></activity>
         <!--视频播放器-->
         <activity android:name=".ui.activity.much.PlayMoveActivity"></activity>
 

@@ -184,6 +184,7 @@ public class MusicActivity extends ListActivity {
      */
     void musicList() {
         File home = new File(MUSIC_PATH);
+        Log.i(TAG, "musicList: "+home);
         if (home.listFiles(new MusicFilter()).length > 0) {
             for (File file : home.listFiles(new MusicFilter())) {
                 myMusicList.add(file.getName());
@@ -209,7 +210,7 @@ public class MusicActivity extends ListActivity {
 
 
     /**
-     * 点击时间
+     * 点击事件
      */
     void listener() {
         /**停止*/
